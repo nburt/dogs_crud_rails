@@ -1,4 +1,5 @@
 <h1><%= @cat.name %></h1>
 <p><%= @cat.color %></p>
 
-<a href="/cats/<%= @cat.id %>/edit">Edit <%= @cat.name %></a>
+<%= link_to "Edit #{@cat.name}", edit_cat_path(@cat) %>
+<%= link_to "Delete #{@cat.name}", cat_path(@cat), method: :delete, Data: {confirm: "Are you sure?"} %>

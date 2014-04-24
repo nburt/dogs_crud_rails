@@ -2,10 +2,10 @@
 <a href="/cats/new">Create Cat</a>
 
 <% @cats.each do |cat| %>
-<table>
-  <tr>
-    <td>Name: <a href="/cats/<%= cat.id %>"><%= cat.name %></a></td>
-    <td>Color: <%= cat.color %></td>
-  </tr>
-</table>
+  <table>
+    <tr>
+      <td>Name: <a href="/cats/<%= cat.id %>"><%= cat.name %></a></td>
+      <td>Color: <%= cat.color %></td>
+    </tr>
+  </table>
 <% end %>

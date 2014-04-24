@@ -38,4 +38,14 @@ feature 'it manages cats' do
     expect(page).to have_content 'Mrs. Kitty'
     expect(page).to have_content 'White'
   end
+
+  scenario 'can delete cats' do
+    fill_in 'cat[name]', :with => 'Mr. Kitty'
+    fill_in 'cat[color]', :with => 'Black'
+    click_button 'Create Kitty'
+
+    click_link 'Mr. Kitty'
+    click_link 'Delete Mr. Kitty'
+    expect(page).to_not have_content 'Mr. Kitty'
+  end
 end
