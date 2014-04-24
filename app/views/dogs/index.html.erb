@@ -2,7 +2,7 @@
 <table id="dogs_table">
   <% @dog.each do |attributes| %>
     <tr>
-      <td>Name: <%= attributes.name %></td>
+      <td>Name: <a href="/dogs/<%= attributes.id %>"><%= attributes.name %></a></td>
       <td>Breed: <%= attributes.breed %></td>
     </tr>
   <% end %>
