@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   put '/dogs/:id', to: 'dogs#update'
   delete '/dogs/:id', to: 'dogs#destroy'
 
+  resources :cats
+
 end

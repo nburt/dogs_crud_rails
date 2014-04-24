@@ -1,0 +1,11 @@
+<h1>Cats!</h1>
+<a href="/cats/new">Create Cat</a>
+
+<% @cats.each do |cat| %>
+<table>
+  <tr>
+    <td>Name: <%= cat.name %></td>
+    <td>Color: <%= cat.color %></td>
+  </tr>
+</table>
+<% end %>

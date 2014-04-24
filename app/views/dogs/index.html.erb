@@ -1,5 +1,5 @@
 <a href="/dogs/new">Create Dog</a>
-<table id="dogs_table">
+<table>
   <% @dog.each do |attributes| %>
     <tr>
       <td>Name: <a href="/dogs/<%= attributes.id %>"><%= attributes.name %></a></td>
