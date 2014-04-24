@@ -26,4 +26,9 @@ class DogsController < ApplicationController
     redirect_to "/dogs/#{params[:id]}"
   end
 
+  def destroy
+    Dog.destroy(params[:id])
+    redirect_to "/dogs"
+  end
+
 end

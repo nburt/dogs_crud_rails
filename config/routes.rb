@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get '/dogs/:id', to: 'dogs#show'
   get '/dogs/:id/edit', to: 'dogs#edit'
   put '/dogs/:id', to: 'dogs#update'
+  delete '/dogs/:id', to: 'dogs#destroy'
 
 end

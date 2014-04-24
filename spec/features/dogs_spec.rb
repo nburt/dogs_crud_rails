@@ -27,4 +27,10 @@ feature 'manage types of dogs' do
     expect(page).to have_content 'Husky'
   end
 
+  scenario 'can delete dogs' do
+    click_link 'Skip'
+    click_button 'Delete Skip'
+    expect(page).to_not have_content 'Skip'
+    expect(page).to_not have_content 'Yellow Lab'
+  end
 end

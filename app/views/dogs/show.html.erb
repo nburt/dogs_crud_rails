@@ -1,3 +1,8 @@
 <h1><%= @dog.name %></h1>
 <p><%= @dog.breed %></p>
 <a href="/dogs/<%= @dog.id %>/edit">Edit <%= @dog.name %></a>
+<form action="/dogs/<%= @dog.id %>" method="post">
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>"/>
+  <input type="hidden" name="_method" value="delete"/>
+  <button type="submit">Delete <%= @dog.name %></button>
+</form>
