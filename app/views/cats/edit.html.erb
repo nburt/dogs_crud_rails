@@ -1,9 +1,9 @@
-<h1>Create Cat</h1>
+<h1>Edit Cat</h1>
 
 <%= form_for @cat do |f| %>
 
   <% if @cat.errors.present? %>
-    <h1>There were <%= @cat.errors.count %> errors:</h1>
+    <h1>There were <%= @cat.errors.count %> errors</h1>
     <ul>
       <% @cat.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -22,7 +22,7 @@
   </p>
 
   <p>
-    <%= f.submit 'Create Kitty' %>
+    <%= f.submit 'Edit Kitty' %>
   </p>
 
 <% end %>
